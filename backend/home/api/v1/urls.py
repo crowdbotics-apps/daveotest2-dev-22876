@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .viewsets import TestViewSet
+from .viewsets import Test2ViewSet
 
 from home.api.v1.viewsets import (
     SignupViewSet,
@@ -10,7 +10,7 @@ from home.api.v1.viewsets import (
 router = DefaultRouter()
 router.register("signup", SignupViewSet, basename="signup")
 router.register("login", LoginViewSet, basename="login")
-router.register("test", TestViewSet)
+router.register("test2", Test2ViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
